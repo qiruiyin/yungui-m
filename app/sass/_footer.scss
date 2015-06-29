@@ -1,0 +1,17 @@
+footer {
+	@include size(100%, auto);
+	background-color: yellow;
+	
+	address {
+		padding-bottom: 1em;
+	}
+
+	p {
+		font-size: .8em;
+
+		&:nth-child(3) {
+			padding-top: .5em;
+			border-top: 1px solid red;
+		}
+	}
+}
