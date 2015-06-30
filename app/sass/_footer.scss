@@ -1,3 +1,6 @@
+@charset 'utf-8';
+@import  'utils/mixins', 'utils/functions';
+
 footer {
 	@include size(100%, auto);
 	background-color: yellow;

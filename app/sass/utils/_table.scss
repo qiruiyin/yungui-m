@@ -1,0 +1,15 @@
+@charset 'utf-8';
+@import  'utils/mixins', 'utils/functions';
+
+table {
+	text-align: center;
+	width: 100%;
+	
+	thead {
+		color: red;
+	}
+
+	td {
+		border: 1px solid red;
+	}
+}

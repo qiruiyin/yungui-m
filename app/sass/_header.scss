@@ -1,6 +1,8 @@
+@charset 'utf-8';
+@import  'utils/mixins', 'utils/functions';
+
 header {
-	border-bottom: 1px solid red;
-	background-color: blue;
+	// border-bottom: 1px solid red;
 
 	.back {
 		position: absolute;
@@ -25,6 +27,7 @@ header {
 		position: absolute;
 		top: 50px;
 		left: 0;
+		margin: 0 auto;
 		line-height: 50px;
 		font-size: 1.5em;
 		background-color: red;

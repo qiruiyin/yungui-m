@@ -4,8 +4,11 @@
 // begin css coding...
 
 .wrapper {
-	@include size(100%, 100px);
 	border: 1px solid #999;
+
+	img {
+		@include size(100%, auto);
+	}
 }
 
 main {
@@ -16,7 +19,11 @@ section {
 	// background-color: rgba(0,0,0, .9);
 	
 	&:nth-child(odd) {
-		background-color: rgba(0,0,0, .3);
+		background-color: ＃fafafa;
+	}
+	
+	h2 {
+		font-size: 2em;
 	}
 
 	p {

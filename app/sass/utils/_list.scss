@@ -1,0 +1,14 @@
+@charset 'utf-8';
+@import  'utils/mixins', 'utils/functions';
+
+ul {
+	// padding: 0 2em;
+	// text-align: left;
+	margin: 10px 0;
+
+	img {
+		width: 100%;
+		padding: 6px 0;
+	}
+}
+
