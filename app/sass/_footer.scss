@@ -3,7 +3,8 @@
 
 footer {
 	@include size(100%, auto);
-	background-color: yellow;
+	background-color: #f2f2f2;
+	padding: 20px 0;
 	
 	address {
 		padding-bottom: 1em;
@@ -11,10 +12,11 @@ footer {
 
 	p {
 		font-size: .8em;
+		color: #999;
 
 		&:nth-child(3) {
 			padding-top: .5em;
-			border-top: 1px solid red;
+			border-top: 1px solid #e3e3e3;
 		}
 	}
 }

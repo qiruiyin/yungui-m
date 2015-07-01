@@ -4,7 +4,7 @@
 // begin css coding...
 
 .wrapper {
-	border: 1px solid #999;
+	// border: 1px solid #999;
 
 	img {
 		@include size(100%, auto);
@@ -12,16 +12,17 @@
 }
 
 main {
+	background-color: #fff;
 	@include size(100%, auto);
 }
 
 section {
-	// background-color: rgba(0,0,0, .9);
-	
-	&:nth-child(odd) {
-		background-color: ＃fafafa;
+	padding-top: 10px;
+
+	&.color1 {
+		background-color: #fefbf6;
 	}
-	
+
 	h2 {
 		font-size: 2em;
 	}
@@ -33,9 +34,11 @@ section {
 	a {
 		line-height: 2em;
 		display: block;
+		color: #3378c5;
 	}
 
 	img {
-		@include size(auto, 200px);
+		@include size(100%, auto);
+		padding: 5px 0;
 	}
 }
