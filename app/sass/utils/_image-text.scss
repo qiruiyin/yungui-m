@@ -3,17 +3,23 @@
 
 .image-text {
 	text-align: center;
-	padding: 20px 20px 0;
+	padding: 20px 0 0;
+	background-color: #fff;
+
+	&:nth-child(n) {
+		margin-bottom: 10px;
+	}
 
 	img {
-		
+		@include size(100%, auto);
+		padding: 10px 0;
 	}
 
 	address {
-
+		font-size: 15px;
 	}
 
 	p {
-
+		font-size: 14px;
 	}
 }

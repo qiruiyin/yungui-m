@@ -1,10 +1,15 @@
 @charset 'utf-8';
 @import  'sandal/core', 'utils/mixins', 'utils/functions';
-@import  'base', 'header', 'footer', 'utils/list', 'utils/table';
+@import  'base', 'header', 'footer', 'utils/list', 'utils/table', 'utils/image-text';
 
 main {
 	background-color: #fff;
-	padding-bottom: 50px;
+	padding-bottom: 30px;
+	min-height: 95vh;
+
+	&.bgc {
+		background-color: #f2f2f2;
+	}
 }
 
 section {
@@ -20,14 +25,24 @@ section {
 		}
 	}
 
-	& > :nth-child(n) {
-		padding: 0 20px;
+	& > :not(img) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	& > img {
+		@include size(100%, auto);
+		padding: 10px 0;
 	}
 
 	h2 {
 		width: 100%;
 		font-size: 1.75em;
-		background-color: red;
+		background-color: #f2f2f2;
+		font-weight: bold;
+		border: 1px solid #e3e3e3;
+		border-left: 0;
+		border-right: 0;
 	}
 
 	h3 {
@@ -40,4 +55,19 @@ section {
 
 .desc {
 	text-indent: 2em;
+}
+
+.city-addr {
+	@include size(106%, 90px);
+	margin: 0 auto;
+	padding: 10px 0;
+
+	li {
+		float: left;
+		width: 33.3%;
+		text-indent: 14px;
+		background: url("../img/business/business2.png") left no-repeat;
+		background-size: auto 80%;
+	}
+	
 }

@@ -6,17 +6,19 @@ $logo-height: 58px;
 $nav-height: 50px;
 
 header {
+	position: relative;
 	background-color: #fff;
+	border-bottom: 1px solid #f2f2f2;
 
 	// 返回
 	.back {
 		@include absolute(left 0 top 0);
-		@include size(20px);
-		border: 1px solid red;
+		@include size(16px);
+		border: 1px solid #b8b8b8;
 		border-right: 0;
 		border-bottom: 0;
 		display: block;
-		margin: 15px 30px;
+		margin: 10px 20px;
 		transform: rotate(-45deg);
 	}
 	// 页面主题
@@ -28,21 +30,33 @@ header {
 		@include size($logo-height, auto);
 		padding: 5px 0;
 	}
-	
-	// 导航
-	ul {
-		@include size(100%, $nav-height);
-		@include absolute(top $height left 0 right 0);
-		max-width: 375px;
-		margin: 0 auto;
-		line-height: $nav-height;
-		font-size: 1.5em;
-		background-color: red;
-		display: none;
+}
 
-		li {
-			float: left;
-			width: 20%;
+.nav {
+	@include size(100%, $nav-height);
+	@include absolute(top $height left 0 right 0);
+	max-width: 375px;
+	margin: 0 auto;
+	line-height: $nav-height;
+	font-size: 1.5em;
+	background-color: #fefcfd;
+	display: none;
+
+	&.active {
+		display: table;
+	}
+
+	div {
+		display: table-cell;
+	}
+
+	a {
+		@include size(100%);
+		color: #333;
+  	display: block;
+
+		&:active {
+			color: #3475c9;
 		}
 	}
 }
@@ -52,5 +66,5 @@ nav {
 	float: right;
 	margin: 0 auto;
 	margin-top: -$height;
-	background: url("../img/index/nav.gif") center/80% no-repeat;
+	background: url("../img/index/nav.png") center/80% no-repeat;
 }	

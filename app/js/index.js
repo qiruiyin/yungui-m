@@ -4,7 +4,7 @@
   /* code here! */
 
   $('nav').click(function(){
-  	$('header > ul').toggle();
+  	$('.nav').toggleClass('active');
   })
 
 })();
