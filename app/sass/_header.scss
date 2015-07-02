@@ -35,7 +35,7 @@ header {
 .nav {
 	@include size(100%, $nav-height);
 	@include absolute(top $height left 0 right 0);
-	max-width: 375px;
+	max-width: $maxwidth;
 	margin: 0 auto;
 	line-height: $nav-height;
 	font-size: 1.5em;
@@ -46,13 +46,16 @@ header {
 		display: table;
 	}
 
-	div {
-		display: table-cell;
+	.nav-row {
+		display: table-row;
+
+		& > div {
+			display: table-cell;
+		}
 	}
 
 	a {
 		@include size(100%);
-		color: #333;
   	display: block;
 
 		&:active {

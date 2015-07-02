@@ -1,5 +1,7 @@
 @charset 'utf-8';
 
+$maxwidth: 100%;
+
 // Sizing shortcuts
 @mixin size($width, $height: $width) {
   width: $width;

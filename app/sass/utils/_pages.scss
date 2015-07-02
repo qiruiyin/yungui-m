@@ -1,0 +1,18 @@
+@charset 'utf-8';
+@import  'utils/mixins', 'utils/functions';
+
+.pages {
+	
+	li {
+		display: inline-block;
+		padding: 0 5px;
+
+		.pages-current {
+			color: red;
+		}
+	}
+
+	// .pages-num {
+	// 	padding: 0 5px;
+	// }
+}
