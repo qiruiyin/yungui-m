@@ -1,6 +1,7 @@
 @charset 'utf-8';
 @import  'sandal/core', 'utils/mixins', 'utils/functions';
-@import  'base', 'header', 'footer', 'utils/list', 'utils/table', 'utils/image-text', 'utils/pages';
+@import  'base', 'header', 'footer', 'utils/list', 'utils/table',
+				 'utils/image-text', 'utils/pages';
 
 main {
 	background-color: #fff;
@@ -70,4 +71,15 @@ section {
 		background-size: auto 80%;
 	}
 	
+}
+
+
+.connect-us {
+	section {
+		line-height: 2em;
+	}
+
+	address {
+		margin-top: 1em;
+	}
 }
