@@ -5,16 +5,22 @@ $height: 35px;
 $logo-height: 58px;
 $nav-height: 50px;
 
+body {
+	padding-top: $height;
+}
+
 header {
-	position: relative;
-	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	@include size(100%, auto);
 	border-bottom: 1px solid #f2f2f2;
 
 	// 返回
 	.back {
 		@include absolute(left 0 top 0);
 		@include size(16px);
-		border: 1px solid #b8b8b8;
+		border: 1px solid black;
 		border-right: 0;
 		border-bottom: 0;
 		display: block;
@@ -24,7 +30,10 @@ header {
 	// 页面主题
 	h1 {
 		@include size(100%, $height);
+		background-color: #fff;
+		// background: rgba(84, 141, 237, 1);
 		line-height: $height;
+		// color: #fff;
 	}
 	img {
 		@include size($logo-height, auto);
@@ -34,16 +43,18 @@ header {
 
 .nav {
 	@include size(100%, $nav-height);
-	@include absolute(top $height left 0 right 0);
+	@include absolute(top $height - 100px left 0 right 0);
 	max-width: $maxwidth;
 	margin: 0 auto;
 	line-height: $nav-height;
-	font-size: 1.5em;
-	background-color: #fefcfd;
-	display: none;
+	background: rgba(0, 0, 0, .6);
+	transform: translateY(0);
+	transition-duration: .5s;
+	display: table;
+	z-index: -1;
 
 	&.active {
-		display: table;
+		transform: translateY(100px);
 	}
 
 	.nav-row {
@@ -57,6 +68,7 @@ header {
 	a {
 		@include size(100%);
   	display: block;
+  	color: #fff;
 
 		&:active {
 			color: #3475c9;
@@ -69,5 +81,6 @@ nav {
 	float: right;
 	margin: 0 auto;
 	margin-top: -$height;
-	background: url("../img/index/nav.png") center/80% no-repeat;
+	background: url("../img/index/nav.png") center no-repeat;
+	background-size: 60%;
 }	

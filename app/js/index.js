@@ -2,9 +2,17 @@
   'use strict';
 
   /* code here! */
+  // 获取导航条
+  var nav = $('nav'),
+  		nav_l = $('.nav');
 
-  $('nav').click(function(){
-  	$('.nav').toggleClass('active');
-  })
+  $('main').click(function(){
+  	$('.nav').hasClass('active') ? $('.nav').removeClass('active') : ' ';
+  });
+
+  nav.click(function(e){
+  	e.stopPropagation();
+  	nav_l.toggleClass('active');
+  });
 
 })();

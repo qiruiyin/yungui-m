@@ -61,14 +61,15 @@ section {
 .city-addr {
 	@include size(106%, 90px);
 	margin: 0 auto;
-	padding: 10px 0;
+	padding: 8px 0;
+	font-size: 12px;
 
 	li {
 		float: left;
 		width: 33.3%;
 		text-indent: 14px;
 		background: url("../img/business/business2.png") left no-repeat;
-		background-size: auto 80%;
+		background-size: 12px 16px;
 	}
 	
 }
