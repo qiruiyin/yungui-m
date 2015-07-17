@@ -11,6 +11,11 @@ body {
 	color: $fontColor;
 	max-width: $maxwidth;
 	margin: 0 auto;
+
+	&.overflow {
+		@include size(100%);
+		overflow: hidden;
+	}
 }
 
 a {
@@ -24,4 +29,11 @@ img {
 
 address {
 	font-style: normal;
+}
+
+.shade {
+	@include fixed(top 0 left 0);
+	@include size(100%);
+	background-color: rgba(0, 0, 0, .3);
+	z-index: 1;
 }

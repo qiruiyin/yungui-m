@@ -18,14 +18,16 @@
   });
 
   // 菜单部分
-  $('nav').on('touchend', function(e){
+  $('nav').on('click', function(e){
     e.stopPropagation();
+    $('.nav').hasClass('active') ? $('.shade').remove() : $('body').append('<div class="shade"></div>');
+    $('body').toggleClass('overflow');
     $('.has-child').removeClass('active');
     $('.nav-child').removeClass('active');
     $('.nav').toggleClass('active');
   });
 
-  $('[data-link]').on('touchend', function(){
+  $('[data-link]').on('click', function(){
     var link_value = $(this).attr('data-link'),
         link_id = $(this).attr('data-linkId'),
         href = '';
@@ -34,21 +36,23 @@
     // link_id ? $('body').scrollTop(-100): '';
   });
 
-  $('.has-child').on('touchend',function(e){
+  $('.has-child').on('click',function(e){
     $(this).siblings('.has-child').removeClass('active');
     $(this).toggleClass('active');
     $(this).siblings('.has-child').next().removeClass('active');
     $(this).next().toggleClass('active');
   });
 
-  $('.nav').on('touchend', function(e){
+  $('.nav').on('click', function(e){
     e.stopPropagation();
   });
   
-  $('body').on('touchend', function(){
+  $('body').on('click', function(){
     $('.has-child').removeClass('active');
     $('.nav-child').removeClass('active');
     $('.nav').removeClass('active');
+    $(this).removeClass('overflow');
+    $('.shade').remove();
   });
 
   // 下拉加载
@@ -62,14 +66,14 @@
       var scrollHeight = $(document).height();
       var windowHeight = $(this).height();
     　if(scrollTop + windowHeight + 0 >= scrollHeight){
-        $('.scroll-more i').addClass('active');
-        setInterval(function(){
-          $('.scroll-more i').removeClass('active');
+        // $('.scroll-more i').addClass('active');
+        // setInterval(function(){
+        //   $('.scroll-more i').removeClass('active');
           if(num <= sum){
-            $('.scroll > :eq('+ num + ')').show();
+            $('.scroll > :eq('+ num++ + ')').show();
           }
-        },1000);
-        num++;
+        // },1000);
+        // num++;
       }
   　}
   });

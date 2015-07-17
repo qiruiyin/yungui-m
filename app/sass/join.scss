@@ -20,13 +20,20 @@
 	img {
 		@include size(80%, auto);
 	}
+
+	p {
+		line-height: 2;
+	}
 }
 
 .join-ask {
-	padding-left: 100px;
-	font-size: $fontSize;
-	
+	padding-left: 100px;	
+
 	.join-title {
 		font-size: $fontSize1;
+	}
+
+	ul {
+		color: $fontColor1;
 	}
 }

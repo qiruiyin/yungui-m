@@ -7,7 +7,7 @@
 	@include size(100%, auto);
 	
 	img {
-		@include size(100%, 100%);
+		@include size(100%, auto);
 	}
 	
 	.swiper-pagination-bullet {
@@ -22,7 +22,7 @@
 .quick-tool {
 	padding-top: 2%;
 	@extend .clearfix;
-	font-size: $fontSize1;
+	font-size: $fontSize;
 	color: #2ebae2;
 
 	li {
@@ -32,13 +32,13 @@
 		background-color: #f2f2f2;
 		margin-left: 2%;
 		margin-bottom: 2%;
-		padding: 10px;
+		padding: 10px 10px 24px;
 		border-radius: 5px;
 	}
 
 	img {
-		padding: 10px;
-		@include size(55px, 50px);
+		padding: 20px 0 5px;
+		@include size(30px, auto);
 	}
 }
 
@@ -47,13 +47,13 @@ section {
 
 	.title {
 		margin-top: 20px;
-		border-top: 1px solid #333;
+		border-top: 1px solid #666;
 		height: 20px;
 
 		p {
 			margin: 0 auto;
 			margin-top: -1em;
-			height: 1.5em;
+			height: 1.2em;
 			width: 150px;
 			background-color: #FFF;
 			font-size: 1.5em;
@@ -62,10 +62,10 @@ section {
 				content: '';
 				float: left;
 				margin-left: -2px;
-				margin-top: 5px; 
+				margin-top: 10px; 
 				// width: 10px;
-				height: 1em;
-				border: 1px solid #333;
+				height: 15px;
+				border: 2px solid #666;
 				transform: rotate(-30deg);
 			}
 			&:after {

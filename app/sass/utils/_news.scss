@@ -18,7 +18,7 @@ $img_height: $img_width * 0.85;
 		display: block;
 		float: left;
 		color: #5bb2df;
-		padding: 0;
+		padding: 5px 0 0;
 
 		&:after {
 			content: '';
@@ -102,11 +102,12 @@ $img_height: $img_width * 0.85;
 
 	img {
 		@include size(100%, auto);
-		padding: 10px 0;
+		margin: 10px 0;
 	}
 	
 	& > p {
 		font-size: $fontSize;
 		padding: 0 $textIndent;
+		margin: 10px 0;
 	}
 }

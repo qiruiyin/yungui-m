@@ -15,9 +15,10 @@
 	@include relative();
 
 	i {
-		@include size(18px, 100%);
+		@include size(10px, 100%);
 		@include absolute(left 8px top 0px);
 		background: url('../img/abs/jiahao.png') center no-repeat;
+		background-size: 100%;
 	}
 
 	&.active {
@@ -25,6 +26,7 @@
 
 		i {
 			background: url('../img/abs/jianhao.png') center no-repeat;
+			background-size: 100%;
 		}
 	}
 }
