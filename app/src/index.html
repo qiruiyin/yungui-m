@@ -2,52 +2,88 @@
 <html>
 @@include('./partial/index-head.html')
 <body>
-@@include('./partial/header.html')
+  <header>
+    <h1><img src="img/index/logo.png" alt="logo"></h1>
+    
+    <nav></nav>
+    
+    <ul class="nav">
+      <li data-link="index">网站首页</li>
+      <li data-link="terminal">云柜终端</li>
+      <li class="has-child">核心平台</li>
+      <ul class="nav-child">
+        <li data-link="platform" data-linkId="user">用户中心</li>
+        <li data-link="platform" data-linkId="weixin">微信公众号</li>
+        <li data-link="platform" data-linkId="app">APP</li>
+      </ul>
+      <li class="has-child">商务合作</li>
+      <ul class="nav-child">
+        <li data-link="business" data-linkId="tuiguang">推广合作</li>
+        <li data-link="business" data-linkId="anzhuang">申请安装</li>
+      </ul>
+      <li class="has-child">广告合作</li>
+      <ul class="nav-child">
+        <li data-link="ad" data-linkId="meiti">终端媒体招商</li>
+        <li data-link="ad" data-linkId="weixin">微信招商</li>
+      </ul>
+      <li data-link="abs">关于我们</li>
+    </ul>
+    <!-- <div class="nav">
+      <div class="nav-row">
+        <div><a href="index.html">首页</a></div>
+        <div><a href="abs.html">公司介绍</a></div>
+        <div><a href="terminal.html">云柜终端</a></div>
+        <div><a href="platform.html">终端平台</a></div>
+      </div>
+      <div class="nav-row">
+        <div><a href="case1.html">案例介绍</a></div>
+        <div><a href="business.html">商务中心</a></div>
+        <div><a href="ad.html">广告合作</a></div>
+        <div><a href="connect-us.html">联系我们</a></div>
+      </div>
+    </div> -->
+  </header>
 
-<div class="wrapper">
-    <img src="img/index/banner.jpg" alt="banner">
-</div>
-<main>
-  <!-- 云柜终端 -->
+  <!-- slide -->
+  <div class="swiper-container" id="slide">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="./img/index/slide-banner1.jpg"></div>
+      <div class="swiper-slide"><img src="./img/index/slide-banner1.jpg"></div>
+      <div class="swiper-slide"><img src="./img/index/slide-banner1.jpg"></div>
+    </div>
+    <div class="swiper-pagination slide-pagination"></div>
+  </div>
+
+  <!-- 快捷工具菜单 -->
+  <ul class="quick-tool">
+    <li data-link="terminal"><img src="./img/index/tool1.png">云柜终端</li>
+    <li data-link="platform"><img src="./img/index/tool2.png">核心平台</li>
+    <li data-link="latest"><img src="./img/index/tool3.png">最新动态</li>
+    <li data-link="case"><img src="./img/index/tool4.png">案例介绍</li>
+  </ul>
+
+  <!-- 最新动态 -->
   <section>
-    <h2>云柜终端</h2>
-    <p>家门口终端寄件既优惠又便捷，取件只需终端输入手机号、验证码即可享受智能取件。</p>
-    <a href="terminal.html">了解更多></a>
-    <img src="img/index/terminal.jpg" alt="云柜终端">
-  </section>
+    <div class="title">
+      <p>最新动态</p>
+    </div>
 
-  <!-- 终端平台 -->
-  <section>
-    <h2>终端平台</h2>
-    <p>终端核心平台，使用更省时更便捷更放心！</p>
-    <a href="platform.html">了解更多></a>
-    <img src="img/index/platform.jpg" alt="终端平台">
-  </section>
+    <div class="swiper-container" id="news">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./img/index/news-banner1.jpg"></div>
+        <div class="swiper-slide"><img src="./img/index/news-banner1.jpg"></div>
+        <div class="swiper-slide"><img src="./img/index/news-banner1.jpg"></div>
+      </div>
+      <div class="swiper-pagination news-pagination"></div>
+    </div>
 
-  <!-- 云柜网点-->
-  <section class="color1">
-    <h2>云柜网点正在全国扩张</h2>
-    <p>社区、办公楼、政府机关、学校都有建...</p>
-    <a href="case1.html">了解更多></a>
-    <img src="img/index/site.jpg" alt="云贵网点">
+    <div class="news" data-link="news1">
+      <p>
+        7月4日，云柜召开了2015半年度经营工作会，本次会议旨在总结半年度工作状况，分析半年度工作关键点，群力群策...
+      </p>
+      <a href="">了解详情</a>
+    </div>
   </section>
-
-  <!-- 商务合作 -->
-  <section>
-    <h2>商务合作</h2>
-    <p>欢迎您成为我们的合作伙伴</p>
-    <a href="business.html">了解更多></a>
-    <img src="img/index/business.jpg" alt="商务合作">
-  </section>
-
-  <!-- 广告合作 -->
-  <section>
-    <h2>广告合作</h2>
-    <p>新型媒体招商更有优势，品牌宣传更有力</p>
-    <a href="ad.html">了解更多></a>
-    <img src="img/index/ad.jpg" alt="广告合作">
-  </section>
-</main>
 
 @@include('./partial/index-footer.html')
 

@@ -1,0 +1,36 @@
+@charset 'utf-8';
+@import  'utils/mixins', 'utils/functions';
+
+.panel {      	
+	border: 1px solid #e7e7e7;
+	margin-bottom: 10px;
+	&:last-child {
+		margin: 0 auto;
+	}
+}
+
+.panel-title {
+	padding: 8px;
+	padding-left: 36px;
+	@include relative();
+
+	i {
+		@include size(18px, 100%);
+		@include absolute(left 8px top 0px);
+		background: url('../img/abs/jiahao.png') center no-repeat;
+	}
+
+	&.active {
+		background-color: #3d80cb;
+
+		i {
+			background: url('../img/abs/jianhao.png') center no-repeat;
+		}
+	}
+}
+
+.panel-content {
+	display: none;
+	padding: 8px;
+	border-top: 1px solid #e7e7e7;
+}

@@ -4,32 +4,43 @@
 <body>
 	<header>
 		<a class="back" href="javascript: history.go(-1);"></a>
-		<h1>商务合作</h1>
-		
-		<nav>
-		</nav>
+		<h1><img src="img/index/logo.png" alt="logo"></h1>
+    
+    <nav></nav>
 
-		<div class="nav">
-			<div class="nav-row">
-				<div><a href="index.html">首页</a></div>
-				<div><a href="abs.html">公司介绍</a></div>
-				<div><a href="terminal.html">云柜终端</a></div>
-				<div><a href="platform.html">终端平台</a></div>
-			</div>
-			<div class="nav-row">
-				<div><a href="case1.html">案例介绍</a></div>
-				<div><a href="business.html">商务中心</a></div>
-				<div><a href="ad.html">广告合作</a></div>
-				<div><a href="connect-us.html">联系我们</a></div>
-			</div>
-		</div>
+		<ul class="nav">
+      <li data-link="index">网站首页</li>
+      <li data-link="terminal">云柜终端</li>
+      <li class="has-child">核心平台</li>
+      <ul class="nav-child">
+        <li data-link="platform" data-linkId="user">用户中心</li>
+        <li data-link="platform" data-linkId="weixin">微信公众号</li>
+        <li data-link="platform" data-linkId="app">APP</li>
+      </ul>
+      <li class="has-child">商务合作</li>
+      <ul class="nav-child">
+        <li data-link="business" data-linkId="tuiguang">推广合作</li>
+        <li data-link="business" data-linkId="anzhuang">申请安装</li>
+      </ul>
+      <li class="has-child">广告合作</li>
+      <ul class="nav-child">
+        <li data-link="ad" data-linkId="meiti">终端媒体招商</li>
+        <li data-link="ad" data-linkId="weixin">微信招商</li>
+      </ul>
+      <li data-link="abs">关于我们</li>
+    </ul>
 	</header>
 
 	<main>
+		<h2>
+			商务合作
+			<p>欢迎您成为我们的合作伙伴</p>
+		</h2>
+		<img src="img/business/banner.jpg">
 		<!-- 推广合作 -->
-		<section>
+		<section id="tuiguang">
 			<h2>推广合作</h2>
-			<img src="img/business/business1.jpg" alt="推广合作">
+			<img src="img/business/tuiguang.jpg" alt="推广合作">
 			<h3>
 				合作须知
 				<p>Work Instructions</p>
@@ -38,18 +49,32 @@
 				<li>
 					<h5>1、欢迎您成为我们的合作伙伴，利用您的资源优势，协助我们在以下城市推广云柜，我们将给予丰厚的奖励</h5>
 					<ul class="city-addr">
+						<li>上海市</li>
+						<li>江苏省苏州市</li>
+						<li>江苏省无锡市</li>
+
 						<li>安徽省合肥市</li>
-						<li>湖南省长沙市</li>
-						<li>湖北省武汉市</li>
+						<li>江苏省常州市</li>
 						<li>山东省济南市</li>
-						<li>江苏省淮安市</li>
-						<li>江苏省扬州市</li>
-						<li>江苏省南通市</li>
-						<li>浙江省金华市</li>
-						<li>湖北省武汉市</li>
+						
+						<li>江苏省镇江市</li>
+						<li>山东省青岛市</li>
+						<li>江苏省徐州市</li>
+						
 						<li>浙江省宁波市</li>
+						<li>江苏省南通市</li>
 						<li>浙江省台州市</li>
-						<li>江苏省连云港市</li>
+						
+						<li>江苏省扬州市</li>
+						<li>浙江省金华市</li>
+						<li>江苏省盐城市</li>
+						
+						<li>湖北省武汉市</li>
+						<li>江苏省淮安市</li>
+						<li>湖南省长沙市</li>
+						
+						<li>江苏省宿迁市</li>
+						<li>江苏省连云港</li>
 					</ul>
 				</li>
 				<li>
@@ -60,21 +85,24 @@
 	    	联系方式
 				<p>Contact Us</p>
 	    </h3>
-	    <p>云柜电话：400-850-8088</p>
+	    <p class="phone">云柜热线：400-850-8088</p>
 		</section>
 
 		<!-- 申请安装 -->
-		<section>
+		<section id="anzhuang">
 			<h2>申请安装</h2>
-			<img src="img/business/business3.jpg" alt="申请安装">
+			<img src="img/business/anzhuang.jpg" alt="申请安装">
 			<h3>
 				申请须知
 				<p>Application Notes</p>
 			</h3>
 			<p>小区、办公楼宇、高等院校均可申请。</p>
-			<p>云柜电话：400-850-8088</p>
+
+	    <p class="phone">云柜热线：400-850-8088</p>
 		</section>
 	</main>
+	
+	@@include('./partial/index-footer.html')
 
 	@@include('./partial/js.html')
 </body>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+	@@include('./partial/head.html')
+<body>
+	<header>
+		<a class="back" href="javascript: history.go(-1);"></a>
+
+		<h1><img src="img/index/logo.png" alt="logo"></h1>
+    
+    <nav></nav>
+
+		<ul class="nav">
+      <li data-link="index">网站首页</li>
+      <li data-link="terminal">云柜终端</li>
+      <li class="has-child">核心平台</li>
+      <ul class="nav-child">
+        <li data-link="platform" data-linkId="user">用户中心</li>
+        <li data-link="platform" data-linkId="weixin">微信公众号</li>
+        <li data-link="platform" data-linkId="app">APP</li>
+      </ul>
+      <li class="has-child">商务合作</li>
+      <ul class="nav-child">
+        <li data-link="business" data-linkId="tuiguang">推广合作</li>
+        <li data-link="business" data-linkId="anzhuang">申请安装</li>
+      </ul>
+      <li class="has-child">广告合作</li>
+      <ul class="nav-child">
+        <li data-link="ad" data-linkId="meiti">终端媒体招商</li>
+        <li data-link="ad" data-linkId="weixin">微信招商</li>
+      </ul>
+      <li data-link="abs">关于我们</li>
+    </ul>
+	</header>
+
+	<main>
+		<h2>
+			最新动态
+			<p>关注我们，共同进步</p>
+		</h2>
+
+		<!-- 最新消息 -->
+		<section class="latest-news" data-link="news1">
+			<img src="img/latest/banner.jpg">
+
+			<div class="news">
+	      <p>
+	        7月4日，云柜召开了2015半年度经营工作会，本次会议旨在总结半年度工作状况，分析半年度工作关键点，群力群策...
+	      </p>
+	      <a>了解详情</a>
+	    </div>
+    </section>
+		
+		<div class="scroll">
+			<div class="latest" data-link="news2">
+	    	<img src="img/latest/duoqimiao.jpg">
+	    	<div class="latest-desc">
+	    		<p class="latest-date">新城多奇妙亲子乐园</p>
+	    		<p class="latest-abs">
+	    			2015年7月3日早上九点，新城多奇妙亲子乐园...
+	    		</p>
+					<div class="latest-link">阅读更多</div>
+	    	</div>
+	    </div>
+
+	    <div class="latest" data-link="news3">
+	    	<img src="img/latest/wuye.jpg">
+	    	<div class="latest-desc">
+	    		<p class="latest-date">2015年半年物业经营工作总结</p>
+	    		<p class="latest-abs">
+	    			2015年7月13日，物业公司半年度经营工作总结会议...
+	    		</p>
+					<div class="latest-link">阅读更多</div>
+	    	</div>
+	    </div>
+		</div>
+    <!-- <div class="scroll-more">
+    	<i></i>
+    	加载更多
+    </div> -->
+	</main>
+	
+	@@include('./partial/index-footer.html')
+
+	@@include('./partial/js.html')
+
+	<script>
+		// (function(){
+		// 	var num = 3;
+		// 	var sum = $('.scroll').children().length;
+		// 	$(window).scroll(function(){
+		// 		var scrollTop = $(this).scrollTop();
+		// 		var scrollHeight = $(document).height();
+		// 		var windowHeight = $(this).height();
+		// 	　if(scrollTop + windowHeight + 50 >= scrollHeight){
+		// 			// $('.scroll-more > i').addClass('active');
+		// 			if(num <= sum){
+		// 				$('.scroll > :eq('+ ++num + ')').show();
+		// 			}
+
+		// 			if(num == sum){
+		// 				$('.scroll-more').hide();
+		// 			}
+		// 　　　	
+		// 			// $('.scroll-more > i').delay(5000).removeClass('active');
+		// 	　}
+		// 	});
+		// })();
+	</script>
+</body>
+</html>

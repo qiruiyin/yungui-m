@@ -5,30 +5,41 @@
 	<header>
 		<a class="back" href="javascript: history.go(-1);"></a>
 
-		<h1>广告合作</h1>
-		
-		<nav>
-		</nav>
+		<h1><img src="img/index/logo.png" alt="logo"></h1>
+    
+    <nav></nav>
 
-		<div class="nav">
-			<div class="nav-row">
-				<div><a href="index.html">首页</a></div>
-				<div><a href="abs.html">公司介绍</a></div>
-				<div><a href="terminal.html">云柜终端</a></div>
-				<div><a href="platform.html">终端平台</a></div>
-			</div>
-			<div class="nav-row">
-				<div><a href="case1.html">案例介绍</a></div>
-				<div><a href="business.html">商务中心</a></div>
-				<div><a href="ad.html">广告合作</a></div>
-				<div><a href="connect-us.html">联系我们</a></div>
-			</div>
-		</div>
+		<ul class="nav">
+      <li data-link="index">网站首页</li>
+      <li data-link="terminal">云柜终端</li>
+      <li class="has-child">核心平台</li>
+      <ul class="nav-child">
+        <li data-link="platform" data-linkId="user">用户中心</li>
+        <li data-link="platform" data-linkId="weixin">微信公众号</li>
+        <li data-link="platform" data-linkId="app">APP</li>
+      </ul>
+      <li class="has-child">商务合作</li>
+      <ul class="nav-child">
+        <li data-link="business" data-linkId="tuiguang">推广合作</li>
+        <li data-link="business" data-linkId="anzhuang">申请安装</li>
+      </ul>
+      <li class="has-child">广告合作</li>
+      <ul class="nav-child">
+        <li data-link="ad" data-linkId="meiti">终端媒体招商</li>
+        <li data-link="ad" data-linkId="weixin">微信招商</li>
+      </ul>
+      <li data-link="abs">关于我们</li>
+    </ul>
 	</header>
 
 	<main>
+		<h2>
+			广告合作
+			<p>一线推广更有力</p>
+		</h2>
+		<img src="img/ad/banner.jpg">
 		<!-- 终端媒体招商 -->
-		<section>
+		<section id="meiti">
 			<h2>终端媒体招商</h2>
 			<img src="img/ad/ad1.jpg" alt="终端媒体招商">
 			<h3>
@@ -53,20 +64,23 @@
 	    	联系方式
 				<p>Contact Us</p>
 	    </h3>
-	    <p>魏女士：13585193461</p>
-	    <p>张女士：18262621286</p>
+	    <p class="person">魏女士：13585193461</p>
+	    <p class="person">张女士：18262621286</p>
 		</section>
 
 		<!-- 微信招商 -->
-		<section>
+		<section id="weixin">
 			<h2>微信招商</h2>
-			<img src="img/ad/ad2.jpg" alt="微信招商">
+			<img src="img/ad/weixinzhaoshang.jpg" alt="微信招商">
 			<h3>
 				微信招商
 				<p>WeChat Investment</p>
 			</h3>
 			<p>“江苏云柜”微信正在进行商家招募，南京市300多处云柜网点，每天数万云柜用户，可以帮助您的品牌立刻脱颖而出！如果您是商家并希望和我们合作，请致电联系我们，或扫描关注云柜微信，直接联系我们！</p>
-			<p>入驻商家条件</p>
+
+		</section>
+		<section>
+			<p class="p-title">1、入驻商家条件</p>
 			<ul>
 				<li>
 					<h5>1、合法经营商家，衣食住行等不限；</h5>
@@ -81,7 +95,7 @@
 					<h5>4、愿意实实在在的为云柜用户提供价格优惠和优质服务。</h5>
 				</li>
 			</ul>
-			<p>提供给入驻商家的服务</p>
+			<p class="p-title">2、提供给入驻商家的服务</p>
 			<ul>
 				<li>
 					<h5>1、微信界面菜单栏添加商家名单；</h5>
@@ -94,10 +108,12 @@
 				联系方式
 				<p>Contact Us</p>
 			</h3>
-			<p>魏女士：13585193461</p>
-	    <p>张女士：18262621286</p>
+			<p class="person">魏女士：13585193461</p>
+	    <p class="person">张女士：18262621286</p>
 		</section>
 	</main>
+
+	@@include('./partial/index-footer.html')
 
 	@@include('./partial/js.html')
 </body>

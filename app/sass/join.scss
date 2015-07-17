@@ -1,0 +1,32 @@
+@charset 'utf-8';
+@import  'utils/mixins', 'utils/functions';
+
+.join {
+	@include relative();
+	padding: 20px 10px 10px;
+	border-bottom: 1px solid #e5e5e5;
+
+	&:last-child {
+		border-bottom: 0;
+	}
+}
+
+.join-job {
+	@include size(80px, auto);
+	@include absolute();
+	font-size: $fontSize1;
+	text-align: center;
+	line-height: 3em;
+	img {
+		@include size(80%, auto);
+	}
+}
+
+.join-ask {
+	padding-left: 100px;
+	font-size: $fontSize;
+	
+	.join-title {
+		font-size: $fontSize1;
+	}
+}

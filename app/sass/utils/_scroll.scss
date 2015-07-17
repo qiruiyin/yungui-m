@@ -1,0 +1,39 @@
+@charset 'utf-8';
+@import  'utils/mixins', 'utils/functions';
+
+.scroll {
+
+	& > :nth-child(n+4) {
+		display: none;
+	}
+
+	// &:after {
+	// 	content: '加载更多';
+		
+	// }
+}
+
+.scroll-more {
+	@include size(100px, 40px);
+	@include relative();
+	padding-left: 20px;
+  margin: 0 auto;
+  margin-top: 10px; 
+  line-height: 3em;
+  
+	i {
+		@include size(20px, 24px);
+		@include absolute(top 8px left 10px);
+		display: inline-block;
+		background: url("../img/latest/more.png") no-repeat;
+  	background-size: auto 100%;
+	
+		transform: rotate(0);
+  	transition: all 1s;
+  	transform-origin: 4px 50%;
+
+  	&.active {
+	  	transform: rotate(360deg);
+	  }
+	} 
+}

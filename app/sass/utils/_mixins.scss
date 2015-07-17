@@ -1,6 +1,19 @@
 @charset 'utf-8';
 
-$maxwidth: 100%;
+$maxwidth: 750px;
+$textIndent: 15px; //文字距离左右的间距
+// 字体大小
+$fontSize0: 12px;
+$fontSize: 14px;
+$fontSize1: 16px;
+$fontSize2: 18px;
+$fontSize3: 20px;
+$fontSize4: 22px;
+$fontSize5: 24px;
+// 字体颜色
+$fontColor: #333;
+$fontColor1: #666;
+$fontColor2: #999;
 
 // Sizing shortcuts
 @mixin size($width, $height: $width) {

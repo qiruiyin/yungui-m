@@ -5,44 +5,258 @@
 	<header>
 		<a class="back" href="javascript: history.go(-1);"></a>
 
-		<h1>公司介绍</h1>
+		<h1><img src="img/index/logo.png" alt="logo"></h1>
+    
+    <nav></nav>
 		
-		<nav>
-		</nav>
-		
-		<div class="nav">
-			<div class="nav-row">
-				<div><a href="index.html">首页</a></div>
-				<div><a href="abs.html">公司介绍</a></div>
-				<div><a href="terminal.html">云柜终端</a></div>
-				<div><a href="platform.html">终端平台</a></div>
-			</div>
-			<div class="nav-row">
-				<div><a href="case1.html">案例介绍</a></div>
-				<div><a href="business.html">商务中心</a></div>
-				<div><a href="ad.html">广告合作</a></div>
-				<div><a href="connect-us.html">联系我们</a></div>
-			</div>
-		</div>
+		<ul class="nav">
+      <li data-link="index">网站首页</li>
+      <li data-link="terminal">云柜终端</li>
+      <li class="has-child">核心平台</li>
+      <ul class="nav-child">
+        <li data-link="platform" data-linkId="user">用户中心</li>
+        <li data-link="platform" data-linkId="weixin">微信公众号</li>
+        <li data-link="platform" data-linkId="app">APP</li>
+      </ul>
+      <li class="has-child">商务合作</li>
+      <ul class="nav-child">
+        <li data-link="business" data-linkId="tuiguang">推广合作</li>
+        <li data-link="business" data-linkId="anzhuang">申请安装</li>
+      </ul>
+      <li class="has-child">广告合作</li>
+      <ul class="nav-child">
+        <li data-link="ad" data-linkId="meiti">终端媒体招商</li>
+        <li data-link="ad" data-linkId="weixin">微信招商</li>
+      </ul>
+      <li data-link="abs">关于我们</li>
+    </ul>
 	</header>
 
 	<main>
+		<h2>
+			关于我们
+			<p>变革物流、创新生活</p>
+		</h2>
+
 		<section>
-			<img src="img/abs/abs.jpg" alt="地图">
+			<h2>公司简介</h2>
+			<img src="img/abs/abs.jpg">
 			<h3>
 				江苏云柜
 				<p>Jiangsu Cloudbox</p>
 			</h3>
 			
-			<p class="desc">
+			<p>
 				江苏云柜网络技术有限公司是全国最优秀的智能快递柜运营企业，致力于提供优质的云柜终端硬件、强大的平台系统以及高效的运营服务。通过自建、运营、改造等措施，江苏云柜积极推广云柜的普遍应用，在有效解决配送末端环节的同时，提供高效的同城配送解决方案与精准的电子商务平台，为社会进步与居民福祉不断努力工作。
 			</p>
-			<p class="desc">
+			<p>
 				江苏云柜网络技术有限公司是江苏省内最大的智能快递柜运营企业，致力于云柜终端硬件的优化和成本控制、云柜管理平台的开发，通过积极推动云柜的普遍应用，最终提供高效同城配送解决方案与电子商务流量转化方案。
 			</p>
+
+			<p>
+				其他城市如有推广资源可拨打电话进行咨询。
+			</p>
+		</section>
+
+		<section>
+			<h2>常见问题</h2>
+			<img src="img/abs/error.jpg" alt="地图">
+			<div class="tabs">
+				<ul class="tabs-title">
+					<li class="active">快递员</li>
+					<li>用户</li>
+				</ul>
+				<div class="tabs-content tabs0">
+					<div class="panel">
+						<div class="panel-title">
+							<i></i>
+							快递员存件，提示账号有异常或超时件，需处理
+						</div>
+						<div class="panel-content">
+							登陆快递员账号，按【快件处理】按钮，找到异常件或者超时件，请取出。
+						</div>
+					</div>
+
+					<div class="panel">
+						<div class="panel-title">
+							<i></i>
+							快递员存件，网络故障
+						</div>
+						<div class="panel-content">
+							请快递员师傅等几分钟，网络会自行恢复，若长时间未恢复，请拨打4008508088转1进行报障。
+						</div>
+					</div>
+
+					<div class="panel">
+						<div class="panel-title">
+							终端屏幕一直提示请关闭某个柜门
+						</div>
+						<div class="panel-content">
+							请找到屏幕显示的柜门号，关闭该柜门。如依旧提示，请拨打4008508088报修。
+						</div>
+					</div>
+
+					<div class="panel">
+						<div class="panel-title">
+							<i></i>
+							取/存件时，按键不灵敏
+						</div>
+						<div class="panel-content">
+							请清理电脑屏下方的灰尘（电脑屏底边与机器相连接的地方）
+						</div>
+					</div>
+
+					<div class="panel">
+						<div class="panel-title">
+							<i></i>
+							如何为快递员云柜账号充值？
+						</div>
+						<div class="panel-content">
+							<p>方法一、系统自助充值</p>
+							<p>登陆云柜终端 —> 选择充值金额 —> 打开手机支付宝，扫描二维码支付 —> 当前登陆账号充值成功。</p>
+							<p>方法二、人工充值</p>
+							<p>您可以直接通过支付宝转账至云柜支付宝账号：jsyungui@163.</p>
+							<p>com（账号名称：江苏云柜网络技术有限公司），并备注需充值手机号，客服会及时为您充值。</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="tabs-content tabs1">
+					<div class="panel">
+						<div class="panel-title">
+							<i></i>
+							物流显示云柜签收，没收到验证码
+						</div>
+						<div class="panel-content">
+							<p>方法一、关注"江苏云柜"微信——绑定手机号码——点击"查询快件"，可随时查询云柜中是否有您的快件。</p>
+							<p>方法二、在云柜终端点击【查询补发】，输入运单号，查看是否有快件，核对收件人电话是否正确，可补发。如不正确，请联系快递员处理。</p>
+						</div>
+					</div>
+
+					<div class="panel">
+						<div class="panel-title">
+							<i></i>
+							取件提示没有可取件，用户不存在，验证码有误等
+						</div>
+						<div class="panel-content">
+							终端按查询补发，输入运单号，看是否有件。若无，请拨打4008508088转1客服热线，会帮您详细查询。
+						</div>
+					</div>
+
+					<div class="panel">
+						<div class="panel-title">
+							<i></i>
+							收件人电话停机、停用，有快件在云柜
+						</div>
+						<div class="panel-content">
+							在云柜屏幕按查询补发按钮，输入运单号，查看快递员电话，通知快递员取出。
+						</div>
+					</div>
+
+					<div class="panel">
+						<div class="panel-title">
+							<i></i>
+							打开柜门是空的/取件打开柜门，快件没取，柜门误关/一个柜门中有两个快件只取出一个
+						</div>
+						<div class="panel-content">
+							请及时拨打4008508088转2转1客服热线，会有工作人员指导您如何处理。
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+
+
+		<section>
+			<h2>加入我们</h2>
+			<div class="join">
+				<div class="join-job">
+					<img src="img/abs/kefu.png">
+					<p>客服专员</p>
+				</div>
+				<div class="join-ask">
+					<div class="join-title">岗位要求：</div>
+					<ul>
+						<li>1.高中以上学历，一年以上服务行业工作经验优先；</li>
+						<li>2.嗓音柔和，有耐心，熟练掌握电脑操作；</li>
+						<li>3.适应节假日值班。</li>
+						<li>4.上班时间：轮班排休。</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="join">
+				<div class="join-job">
+					<img src="img/abs/business.png">
+					<p>商务经理</p>
+				</div>
+				<div class="join-ask">
+					<div class="join-title">岗位要求</div>
+					<ul>
+						<li>1.有1-2年的推广或销售经验，吃苦耐劳，大专学历以上，特别优秀者学历可方宽；</li>
+						<li>2.熟练使用计算机及日常办公软件；</li>
+						<li>3.品德过硬，有良好的表达能力、心态积极，学习力强，责任心强，压力承受力强，执行力强；</li>
+						<li>4.可以接受公司决定的其他城市外派工作；</li>
+						<li>5.本岗位欢迎应届毕业生加入，大专以上学历，五官端正、举止得体，有较强的沟通能力，能吃苦耐劳，大学期间有社团经验的优先。</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="join">
+				<div class="join-job">
+					<img src="img/abs/engineer.png">
+					<p>硬件工程师</p>
+				</div>
+				<div class="join-ask">
+					<div class="join-title">岗位要求</div>
+					<ul>
+						<li>1.高中及以上学历，电子、机械工程等专业优先；</li>
+						<li>2.熟悉windows系统的安装和设置；</li>
+						<li>3.熟悉pc的安装和故障排除，懂LCD和LED相关技术的优先；</li>
+						<li>4.有梦想、能吃苦、工作积极主动；</li>
+						<li>5.能适应短期出差。</li>
+					</ul>
+				</div>		
+			</div>
+		</section>
+
+		<section>
+			<h2>联系我们</h2>
+			<iframe src="map.html"></iframe>
+			<!-- <img src="img/abs/map.jpg" alt="地图"> -->
+			<address>地址：上海市普陀区大渡河路588号国盛中心4号楼6层</address>
+			<p>电话：4008-508-088</p>
+			<p>固话：025-6993－0513</p>
+	    <p>服务：ygservice@yun-gui.com</p>
+	    <p>招聘：hr2@yun-gui.com</p>
 		</section>
 	</main>
+	
+	@@include('./partial/index-footer.html')
 
 	@@include('./partial/js.html')
+
+	<script type="text/javascript">
+	(function(){
+		// tabs
+		$('.tabs-title > li').on('click', function(){
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+			$('.tabs-content').hide()
+			$('.tabs' + $(this).index()).show();
+			// $('.tabs' + $(this).index()).show();
+		});
+
+		// panel
+		$('.panel-title').on('click', function(){
+			$(this).toggleClass('active');
+			$(this).parent('.panel').siblings().children('.panel-title').removeClass('active');
+			$(this).siblings().toggle();
+			$(this).parent('.panel').siblings().children('.panel-content').hide();
+		});
+	})();
+	</script>
 </body>
 </html>

@@ -1,0 +1,112 @@
+@charset 'utf-8';
+@import  'utils/mixins', 'utils/functions';
+
+$img_width: 120px;
+$img_height: $img_width * 0.85;
+.news {
+	@extend %clearfix;
+	text-align: left;
+	padding: 10px $textIndent;
+	background-color: #f2f2f2;
+	color: $fontColor1;
+
+	p {
+		line-height: 1.5;
+	}
+
+	a {
+		display: block;
+		float: left;
+		color: #5bb2df;
+		padding: 0;
+
+		&:after {
+			content: '';
+			@include size(8px);
+			@include absolute();
+			margin-top: 5px;
+			border: 1px solid #5bb2df;
+			border-left: 0;
+			border-bottom: 0;
+			transform: rotate(45deg);
+		}
+		// background: url('../img/index/arrow-left.png') right 2px no-repeat;
+		// background-size: auto 80%;
+	}
+}
+
+.latest-news {
+	padding: 0;
+	img {
+		padding: 0;
+	}
+}
+
+.latest {
+	@include relative();
+	padding: 10px;
+	margin-top: 10px;
+	background-color: #f2f2f2;
+	text-align: left;
+
+	img {
+		@include size($img_width, $img_height);
+		position: absolute;
+	}
+
+	.latest-desc {
+		@include size(auto, $img_height);
+		padding-left: $img_width + 10px;
+	}
+
+	.latest-date {
+		color: $fontColor;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.latest-abs {
+		color: $fontColor1;
+	}
+
+	.latest-link {
+		@include absolute(left 140px bottom 10px);
+		color: #5bb2df;
+
+		&:after {
+			content: '';
+			@include size(8px);
+			@include absolute();
+			margin-top: 5px;
+			border: 1px solid #5bb2df;
+			border-left: 0;
+			border-bottom: 0;
+			transform: rotate(45deg);
+		}
+	}
+}
+
+// 新闻页面css 
+.news-content {
+	text-align: left;
+	padding-bottom: 40px;
+	h2 {
+		padding: 0 $textIndent;
+		font-size: $fontSize2;
+
+		p {
+			font-size: $fontSize0;
+		}
+	}
+
+	img {
+		@include size(100%, auto);
+		padding: 10px 0;
+	}
+	
+	& > p {
+		font-size: $fontSize;
+		padding: 0 $textIndent;
+	}
+}

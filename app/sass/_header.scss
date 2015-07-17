@@ -1,8 +1,9 @@
 @charset 'utf-8';
 @import  'utils/mixins', 'utils/functions';
 
-$height: 35px;
-$logo-height: 58px;
+$height: 58px;
+$logo-width: 59px;
+$logo-height: 26px;
 $nav-height: 50px;
 
 body {
@@ -15,6 +16,7 @@ header {
 	left: 0;
 	@include size(100%, auto);
 	border-bottom: 1px solid #f2f2f2;
+	z-index: 2;
 
 	// 返回
 	.back {
@@ -24,55 +26,77 @@ header {
 		border-right: 0;
 		border-bottom: 0;
 		display: block;
-		margin: 10px 20px;
+		margin: 20px;
 		transform: rotate(-45deg);
 	}
 	// 页面主题
 	h1 {
 		@include size(100%, $height);
 		background-color: #fff;
-		// background: rgba(84, 141, 237, 1);
 		line-height: $height;
-		// color: #fff;
+		z-index: 2;
+
 	}
 	img {
-		@include size($logo-height, auto);
-		padding: 5px 0;
+		@include size($logo-width, auto);
+		padding: ($height - $logo-height)/2 0;
+	}
+}
+
+.nav, .nav-child {
+	margin: 0 auto;
+	text-align: left;
+	background-color: rgba(255, 255, 255, .97);
+	text-indent: 1em;
+	line-height: 3em;
+	color: $fontColor1;
+	font-size: $fontSize1;
+
+	li {
+		border-top: 1px solid #e5e5e5;
+		@include relative();
+
+		&.has-child:after {
+			content: '';
+			@include absolute(right 20px);
+			@include size(12px);
+			margin: 20px 0 0 30px;
+			transform: rotate(-45deg);
+			transition: all 500ms;
+			border: 2px solid #bababa;
+			border-bottom: 0;
+			border-left: 0;
+		}
+
+		&.has-child.active:after {
+			margin: 10px 0 0 30px;
+			transform: rotate(135deg);
+		}
 	}
 }
 
 .nav {
-	@include size(100%, $nav-height);
-	@include absolute(top $height - 100px left 0 right 0);
-	max-width: $maxwidth;
-	margin: 0 auto;
-	line-height: $nav-height;
-	background: rgba(0, 0, 0, .6);
+	@include absolute(top $height - 408px left 0 right 0);
 	transform: translateY(0);
 	transition-duration: .5s;
-	display: table;
 	z-index: -1;
 
 	&.active {
-		transform: translateY(100px);
+		transform: translateY(408px);
 	}
+}
 
-	.nav-row {
-		display: table-row;
+.nav-child {
+	text-indent: 3em;
+	background: none;
+	height: 0;
+	overflow: hidden;
+	font-size: $fontSize;
+	// animation
+	// display: none;
 
-		& > div {
-			display: table-cell;
-		}
-	}
-
-	a {
-		@include size(100%);
-  	display: block;
-  	color: #fff;
-
-		&:active {
-			color: #3475c9;
-		}
+	&.active {
+		height: auto;
 	}
 }
 // 导航按钮
@@ -82,5 +106,5 @@ nav {
 	margin: 0 auto;
 	margin-top: -$height;
 	background: url("../img/index/nav.png") center no-repeat;
-	background-size: 60%;
+	background-size: 50%;
 }	
