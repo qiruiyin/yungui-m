@@ -6,8 +6,8 @@
     <meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
     <title>百度地图API自定义地图</title>
     <!--引用百度地图API-->
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=dvzx2lNQ9IkIHHolXgDZg1Wt"></script>
-    
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=LIkC9tF2oUR4DeljZC3toZtb"></script>
+
     <style type="text/css">
       body {
         padding: 0;
@@ -33,7 +33,7 @@
     }
     function createMap(){ 
       map = new BMap.Map("map"); 
-      map.centerAndZoom(new BMap.Point(121.402176,31.231123),19);
+      map.centerAndZoom(new BMap.Point(121.402176,31.231259),19);
     }
     function setMapEvent(){
       map.enableScrollWheelZoom();
@@ -48,7 +48,7 @@
     }
     function addMapOverlay(){
       var markers = [
-        {content:"地址：上海市普陀区大渡河路588号国盛中心4号楼6层",title:"江苏云柜网络技术有限公司",imageOffset: {width:-69,height:-21},position:{lat:31.230803,lng:121.402351}}
+        {content:"地址：上海市普陀区大渡河路588号国盛中心4号楼6层",title:"江苏云柜网络技术有限公司",imageOffset: {width:-69,height:-21},position:{lat:31.231158,lng:121.401965}}
       ];
       for(var index = 0; index < markers.length; index++ ){
         var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
