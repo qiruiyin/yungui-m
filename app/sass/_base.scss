@@ -11,6 +11,7 @@ body {
 	color: $fontColor;
 	max-width: $maxwidth;
 	margin: 0 auto;
+	cursor: pointer;
 
 	&.overflow {
 		@include size(100%);

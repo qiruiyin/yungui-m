@@ -7,7 +7,6 @@
   <!-- slide -->
   <div class="swiper-container" id="slide">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="./img/index/slide-banner1.jpg"></div>
       <div class="swiper-slide"><img src="./img/index/slide-banner2.jpg"></div>
       <div class="swiper-slide"><img src="./img/index/slide-banner3.jpg"></div>
     </div>
@@ -28,7 +27,7 @@
       <p>最新动态</p>
     </div>
 
-    <div class="swiper-container" id="news">
+    <div class="swiper-container" id="newsSwiper1">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img data-link="news1" src="./img/index/news-banner1.jpg"></div>
         <div class="swiper-slide"><img data-link="news2" src="./img/index/news-banner2.jpg"></div>
@@ -37,12 +36,37 @@
       <div class="swiper-pagination news-pagination"></div>
     </div>
 
-    <div class="news" data-link="news1">
-      <p>
-        7月4日，云柜召开了2015半年度经营工作会，本次会议旨在总结半年度工作状况，分析半年度工作关键点，群力群策...
-      </p>
-      <a>了解详情</a>
+    <div class="swiper-container" id="newsSwiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="news" data-link="news1">
+            <p>
+              7月4日，云柜召开了2015半年度经营工作会，本次会议旨在总结半年度...
+            </p>
+            <a>了解详情</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="news" data-link="news1">
+            <p>
+              谁说不能抢生意，现在就下载云柜手机APP，如果用户寄件，你就可以即...
+            </p>
+            <a>了解详情</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="news" data-link="news1">
+            <p>
+              关注公众号江苏云柜，绑定手机号，找到寄件功能菜单，点击填写寄件面...
+            </p>
+            <a>了解详情</a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="swiper-pagination slide-pagination"></div> -->
     </div>
+
+    
   </section>
 
 @@include('./partial/index-footer.html')

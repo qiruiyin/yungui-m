@@ -23,6 +23,7 @@
 
 	&.active {
 		background-color: #3d80cb;
+		color: #fff;
 
 		i {
 			background: url('../img/abs/jianhao.png') center no-repeat;
@@ -35,4 +36,5 @@
 	display: none;
 	padding: 8px;
 	border-top: 1px solid #e7e7e7;
+	color: $fontColor1;
 }

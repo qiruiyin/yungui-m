@@ -16,18 +16,19 @@
 .scroll-more {
 	@include size(100px, 40px);
 	@include relative();
-	padding-left: 20px;
+	padding-left: 10px;
   margin: 0 auto;
-  margin-top: 10px; 
+  margin-top: 0px; 
   line-height: 3em;
+	color: $fontColor2;
   
 	i {
 		@include size(20px, 24px);
 		@include absolute(top 8px left 10px);
 		display: inline-block;
-		background: url("../img/latest/more.png") no-repeat;
-  	background-size: auto 100%;
-	
+		background: url("../img/latest/more.png") center no-repeat;
+  	background-size: auto 60%;
+
 		transform: rotate(0);
   	transition: all 1s;
   	transform-origin: 4px 50%;

@@ -19,12 +19,14 @@ $img_height: $img_width * 0.85;
 		float: left;
 		color: #5bb2df;
 		padding: 5px 0 0;
+		@include relative();
 
 		&:after {
 			content: '';
-			@include size(8px);
+			@include size(6px);
 			@include absolute();
-			margin-top: 5px;
+			// margin-top: 6px;
+			bottom: 6px;
 			border: 1px solid #5bb2df;
 			border-left: 0;
 			border-bottom: 0;
@@ -60,10 +62,12 @@ $img_height: $img_width * 0.85;
 	}
 
 	.latest-date {
+		font-size: $fontSize1;
 		color: $fontColor;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		padding-bottom: 2px;
 	}
 
 	.latest-abs {
@@ -76,9 +80,9 @@ $img_height: $img_width * 0.85;
 
 		&:after {
 			content: '';
-			@include size(8px);
+			@include size(6px);
 			@include absolute();
-			margin-top: 5px;
+			bottom: 6px;
 			border: 1px solid #5bb2df;
 			border-left: 0;
 			border-bottom: 0;
@@ -90,24 +94,35 @@ $img_height: $img_width * 0.85;
 // 新闻页面css 
 .news-content {
 	text-align: left;
-	padding-bottom: 40px;
+	padding-bottom: 30px;
+	padding-top: 10px;
 	h2 {
-		padding: 0 $textIndent;
-		font-size: $fontSize2;
-
+		padding: 10px $textIndent;
+		font-size: $fontSize4;
+		line-height: 1.5;
+		
 		p {
 			font-size: $fontSize0;
+			color: $fontColor1;
 		}
 	}
-
+	
 	img {
 		@include size(100%, auto);
 		margin: 10px 0;
 	}
 	
-	& > p {
+	& > p, & > div {
 		font-size: $fontSize;
 		padding: 0 $textIndent;
 		margin: 10px 0;
+	}
+
+	ul {
+		margin: 0 auto;
+	}
+
+	h3 {
+		font-size: $fontSize2;
 	}
 }

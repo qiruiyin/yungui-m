@@ -5,11 +5,12 @@
 
 main {
 	background-color: #fff;
+	padding-top: 10px;
 	padding-bottom: 10px;
-
-	// &.bgc {
-	// 	background-color: #f2f2f2;
-	// }
+	
+	& > :last-child {
+		padding-bottom: 30px; 
+	}
 
 	& > h2 {
 		text-indent: $textIndent;
@@ -84,20 +85,33 @@ section {
 	}
 
 	h5 {
-		font-size: $fontSize;
+		font-size: $fontSize1;
 		font-weight: normal;
 	}
 
 	ul {
 		p {
-			font-size: $fontSize0;
+			font-size: $fontSize;
 			color: $fontColor1;
+		}
+	}
+
+	.xiaoguo {
+		margin-top: 0; 
+		color: $fontColor1;
+
+		h5 {
+			font-size: $fontSize;
 		}
 	}
 
 	.p-title {
 		font-size: $fontSize1;
 	}
+}
+
+#weixin {
+	padding-bottom: 20px;
 }
 .phone, .person{
 	color: #1591d2;

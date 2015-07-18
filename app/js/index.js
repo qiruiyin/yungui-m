@@ -6,24 +6,25 @@
   var navSwiper = new Swiper('#slide',{
     pagination : '.slide-pagination',
     loop: true,
-    autoplay: 1500,//可选选项，自动滑动
-    //pagination : '#swiper-pagination1',
+    autoplay: 1500,
   });
 
-  var mySwiper = new Swiper('#news',{
+  var newsSwiper1 = new Swiper('#newsSwiper1',{
     pagination : '.news-pagination',
     loop: true,
-    autoplay: 1200,//可选选项，自动滑动
-    //pagination : '#swiper-pagination1',
+    autoplay: 1200,
   });
+  var newsSwiper2 = new Swiper('#newsSwiper2',{
+    pagination : '.news-pagination',
+    loop: true,
+    autoplay: 1200,
+  });
+  newsSwiper1.params.control = newsSwiper2;
+  newsSwiper2.params.control = newsSwiper1;
 
   // 菜单部分
   $('nav').on('click', function(e){
     e.stopPropagation();
-    // $('.nav').hasClass('active') ? $('.shade').remove() : $('body').append('<div class="shade"></div>');
-    // $('body').toggleClass('overflow');
-    // $('.has-child').removeClass('active');
-    // $('.nav-child').removeClass('active');
     $('.nav').toggleClass('active');
   });
 
@@ -35,24 +36,9 @@
     location.href = href;
     // link_id ? $('body').scrollTop(-100): '';
   });
-
-  // $('.has-child').on('click',function(e){
-  //   $(this).siblings('.has-child').removeClass('active');
-  //   $(this).toggleClass('active');
-  //   $(this).siblings('.has-child').next().removeClass('active');
-  //   $(this).next().toggleClass('active');
-  // });
-
-  // $('.nav').on('click', function(e){
-  //   e.stopPropagation();
-  // });
   
-  $('body').on('click', function(){
-    // $('.has-child').removeClass('active');
-    // $('.nav-child').removeClass('active');
+  $(document.body).on('click', function(){
     $('.nav').removeClass('active');
-    // $(this).removeClass('overflow');
-    // $('.shade').remove();
   });
 
   // 下拉加载
@@ -60,7 +46,7 @@
   var sum = $('.scroll').children().length;
   $(window).scroll(function(){
    if(num == sum-1){
-      $('.scroll-more').html("全部加载");
+      $('.scroll-more').html("<i></i>" + "全部加载");
     } else {
       var scrollTop = $(this).scrollTop();
       var scrollHeight = $(document).height();
