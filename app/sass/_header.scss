@@ -2,9 +2,13 @@
 @import  'utils/mixins', 'utils/functions';
 
 $height: 58px;
-$logo-width: 67px;
-$logo-height: 32px;
+// $logo-width: 67px;
+$logo-height: 30px;
 $nav-height: 50px;
+
+// $height: 35px;
+// $logo-height: 58px;
+// $nav-height: 50px;
 
 body {
 	padding-top: $height;
@@ -16,93 +20,66 @@ header {
 	left: 0;
 	@include size(100%, auto);
 	border-bottom: 1px solid #f2f2f2;
-	z-index: 2;
+	z-index: 10;
 
 	// 返回
 	.back {
 		@include absolute(left 0 top 0);
 		@include size(16px);
-		border: 3px solid #999;
+		border: 1px solid black;
 		border-right: 0;
 		border-bottom: 0;
 		display: block;
-		margin: 20px;
+		margin: 10px 20px;
 		transform: rotate(-45deg);
-		display: none;
 	}
 	// 页面主题
 	h1 {
 		@include size(100%, $height);
 		background-color: #fff;
+		// background: rgba(84, 141, 237, 1);
 		line-height: $height;
-		z-index: 2;
-		 
+		// color: #fff;
 	}
 	img {
-		@include size($logo-width, auto);
+		@include size(auto, $height);
 		padding: ($height - $logo-height)/2 0;
 		margin-left: $textIndent;
 	}
 }
 
-.nav, .nav-child {
-	margin: 0 auto;
-	text-align: left;
-	background-color: rgba(255, 255, 255, .97);
-	text-indent: 1em;
-	line-height: 3em;
-	color: $fontColor1;
-	font-size: $fontSize1;
-
-	li {
-		border-top: 1px solid #e5e5e5;
-		@include relative();
-
-		&.has-child:after {
-			content: '';
-			@include absolute(right 20px);
-			@include size(12px);
-			margin: 20px 0 0 30px;
-			transform: rotate(-45deg);
-			transition: all 500ms;
-			border: 2px solid #bababa;
-			border-bottom: 0;
-			border-left: 0;
-		}
-
-		&.has-child.active:after {
-			margin: 10px 0 0 30px;
-			transform: rotate(135deg);
-		}
-	}
-}
-
 .nav {
-	@include absolute(top $height - 408px left 0 right 0);
+	@include size(100%, $nav-height);
+	@include absolute(top $height - 100px left 0 right 0);
+	max-width: $maxwidth;
+	margin: 0 auto;
+	line-height: $nav-height;
+	background: rgba(0, 0, 0, .6);
 	transform: translateY(0);
 	transition-duration: .5s;
+	display: table;
 	z-index: -1;
 
 	&.active {
-		transform: translateY(408px);
+		transform: translateY(100px);
 	}
 
-	li:last-child {
-		border-bottom: 1px solid #e5e5e5;
+	.nav-row {
+		display: table-row;
+
+		& > div {
+			display: table-cell;
+		}
 	}
-}
 
-.nav-child {
-	text-indent: 3em;
-	background: none;
-	height: 0;
-	overflow: hidden;
-	font-size: $fontSize;
-	// animation
-	// display: none;
+	a {
+		@include size(100%);
+  	display: block;
+  	color: #fff;
 
-	&.active {
-		height: auto;
+		&:active {
+			color: #3475c9;
+		}
 	}
 }
 // 导航按钮
@@ -114,51 +91,6 @@ nav {
 	background: url("../img/index/nav.png") center no-repeat;
 	background-size: 50%;
 }	
-
-@media screen and ( max-height : 600px ){
-	.nav {
-		height: 500px;
-		overflow: scroll;
-		top: -600px;
-
-		&.active {
-			transform: translateY(658px);
-		}
-	}
-} 
-
-@media screen and ( max-height : 500px ){
-	.nav {
-		height: 400px;
-		overflow: scroll;
-		top: -500px;
-		&.active {
-			transform: translateY(558px);
-		}		
-	}
-} 
-
-@media screen and ( max-height : 400px ){
-	.nav {
-		height: 300px;
-		overflow: scroll;
-		top: -400px;
-		&.active {
-			transform: translateY(458px);
-		}
-	}
-} 
-
-@media screen and ( max-height : 300px ){
-	.nav {
-		height: 200px;
-		overflow: scroll;
-		top: -300px;
-		&.active {
-			transform: translateY(358px);
-		}
-	}
-} 
 
 
 

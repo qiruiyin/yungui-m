@@ -20,10 +20,10 @@
   // 菜单部分
   $('nav').on('click', function(e){
     e.stopPropagation();
-    $('.nav').hasClass('active') ? $('.shade').remove() : $('body').append('<div class="shade"></div>');
-    $('body').toggleClass('overflow');
-    $('.has-child').removeClass('active');
-    $('.nav-child').removeClass('active');
+    // $('.nav').hasClass('active') ? $('.shade').remove() : $('body').append('<div class="shade"></div>');
+    // $('body').toggleClass('overflow');
+    // $('.has-child').removeClass('active');
+    // $('.nav-child').removeClass('active');
     $('.nav').toggleClass('active');
   });
 
@@ -36,23 +36,23 @@
     // link_id ? $('body').scrollTop(-100): '';
   });
 
-  $('.has-child').on('click',function(e){
-    $(this).siblings('.has-child').removeClass('active');
-    $(this).toggleClass('active');
-    $(this).siblings('.has-child').next().removeClass('active');
-    $(this).next().toggleClass('active');
-  });
+  // $('.has-child').on('click',function(e){
+  //   $(this).siblings('.has-child').removeClass('active');
+  //   $(this).toggleClass('active');
+  //   $(this).siblings('.has-child').next().removeClass('active');
+  //   $(this).next().toggleClass('active');
+  // });
 
-  $('.nav').on('click', function(e){
-    e.stopPropagation();
-  });
+  // $('.nav').on('click', function(e){
+  //   e.stopPropagation();
+  // });
   
   $('body').on('click', function(){
-    $('.has-child').removeClass('active');
-    $('.nav-child').removeClass('active');
+    // $('.has-child').removeClass('active');
+    // $('.nav-child').removeClass('active');
     $('.nav').removeClass('active');
-    $(this).removeClass('overflow');
-    $('.shade').remove();
+    // $(this).removeClass('overflow');
+    // $('.shade').remove();
   });
 
   // 下拉加载
