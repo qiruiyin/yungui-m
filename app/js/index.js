@@ -4,20 +4,22 @@
   /* code here! */
   // 首页的轮播图
   var navSwiper = new Swiper('#slide',{
+    direction: 'horizontal',
     pagination : '.slide-pagination',
     loop: true,
     autoplay: 1500,
+    autoplayDisableOnInteraction: false,
   });
 
   var newsSwiper1 = new Swiper('#newsSwiper1',{
     pagination : '.news-pagination',
-    loop: true,
-    autoplay: 1200,
+    loop: false,
+    // autoplay: 1200,
   });
   var newsSwiper2 = new Swiper('#newsSwiper2',{
-    pagination : '.news-pagination',
-    loop: true,
+    loop: false,
     autoplay: 1200,
+    autoplayDisableOnInteraction: false,
   });
   newsSwiper1.params.control = newsSwiper2;
   newsSwiper2.params.control = newsSwiper1;
@@ -28,6 +30,11 @@
     $('.nav').toggleClass('active');
   });
 
+  $(document.body).on('click', function(){
+    $('.nav').removeClass('active');
+  });
+
+  // 链接跳转
   $('[data-link]').on('click', function(){
     var link_value = $(this).attr('data-link'),
         link_id = $(this).attr('data-linkId'),
@@ -37,10 +44,6 @@
     // link_id ? $('body').scrollTop(-100): '';
   });
   
-  $(document.body).on('click', function(){
-    $('.nav').removeClass('active');
-  });
-
   // 下拉加载
   var num = 3;
   var sum = $('.scroll').children().length;
@@ -65,9 +68,9 @@
   });
 
   // 判断hash值是否存在
-  if(location.hash){
-    var offset_top = $(location.hash).offset().top - 58;
-    $('html,body').stop().animate({scrollTop:offset_top});
-  }
+  // if(location.hash){
+  //   var offset_top = $(location.hash).offset().top - 58;
+  //   $('html,body').stop().animate({scrollTop:offset_top});
+  // }
 
 })();
