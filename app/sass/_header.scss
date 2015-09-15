@@ -1,14 +1,9 @@
 @charset 'utf-8';
 @import  'utils/mixins', 'utils/functions';
 
-$height: 58px;
-// $logo-width: 67px;
+$height: 54px;
 $logo-height: 30px;
 $nav-height: 50px;
-
-// $height: 35px;
-// $logo-height: 58px;
-// $nav-height: 50px;
 
 body {
 	padding-top: $height;
@@ -19,7 +14,7 @@ header {
 	top: 0;
 	left: 0;
 	@include size(100%, auto);
-	border-bottom: 1px solid #f2f2f2;
+	// border-bottom: 1px solid #f2f2f2;
 	z-index: 10;
 
 	// 返回
@@ -36,14 +31,16 @@ header {
 	// 页面主题
 	h1 {
 		@include size(100%, $height);
-		background-color: #121d2c;
+		background-color: #121d2c; //#3190e8
+		padding: 9px 0;
 		// background: rgba(84, 141, 237, 1);
 		line-height: $height;
 		// color: #fff;
 	}
 	img {
-		@include size(auto, $height);
-		padding: ($height - $logo-height)/2 0;
+		@include size(auto, 36px);
+		background-color: #fff;
+		border-radius: 2px;
 		margin-left: $textIndent;
 	}
 }
@@ -89,7 +86,7 @@ nav {
 	margin: 0 auto;
 	margin-top: -$height;
 	background: url("../img/index/nav.png") center no-repeat;
-	background-size: 50%;
+	background-size: 40%;
 }	
 
 

@@ -14,7 +14,6 @@
   var newsSwiper1 = new Swiper('#newsSwiper1',{
     pagination : '.news-pagination',
     loop: false,
-    // autoplay: 1200,
   });
   var newsSwiper2 = new Swiper('#newsSwiper2',{
     loop: false,
@@ -41,7 +40,6 @@
         href = '';
     href = link_id ? link_value + '.html#' + link_id : link_value + '.html'; 
     location.href = href;
-    // link_id ? $('body').scrollTop(-100): '';
   });
   
   // 下拉加载
@@ -55,22 +53,18 @@
       var scrollHeight = $(document).height();
       var windowHeight = $(this).height();
     　if(scrollTop + windowHeight + 0 >= scrollHeight){
-        // $('.scroll-more i').addClass('active');
-        // setInterval(function(){
-        //   $('.scroll-more i').removeClass('active');
           if(num <= sum){
             $('.scroll > :eq('+ num++ + ')').show();
           }
-        // },1000);
-        // num++;
       }
   　}
   });
 
-  // 判断hash值是否存在
-  // if(location.hash){
-  //   var offset_top = $(location.hash).offset().top - 58;
-  //   $('html,body').stop().animate({scrollTop:offset_top});
-  // }
-
+  // 关闭app下载提示
+  $(document.body).on('click', '.app-link > .close', function(e){
+    e.stopPropagation();
+    $(this).css('border','1px solid red');
+    $(this).parent().hide();
+    $('footer').css('padding-bottom','8px');
+  });
 })();
